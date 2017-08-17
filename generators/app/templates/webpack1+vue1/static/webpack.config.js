@@ -5,11 +5,11 @@ var webpack = require('webpack');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var CopyWebpackPlugin = require('copy-webpack-plugin');
 var CleanWebpackPlugin = require('clean-webpack-plugin');
-var STATIC_SRC = require("./f2eci")["static-src"];
-var DIST_PATH = require('./f2eci').dist;
-var HTML_PATH = require('./f2eci').output;
-const env = require("./f2eci").env;
-const PUBLIC_PATH = require('./f2eci').urlPrefix + STATIC_SRC + '/';
+var STATIC_SRC = require("./ciconfig")["static-src"];
+var DIST_PATH = require('./ciconfig').dist;
+var HTML_PATH = require('./ciconfig').output;
+const env = require("./ciconfig").env;
+const PUBLIC_PATH = require('./ciconfig').urlPrefix + STATIC_SRC + '/';
 var plugins = [
     new CleanWebpackPlugin(['dist'], {
         root: path.join(__dirname),

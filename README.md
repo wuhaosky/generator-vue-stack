@@ -13,11 +13,11 @@
 
 ## 使用脚手架生成项目
 *   npm install -g yo
-*   npm install -g @gfe/generator-vue-stack
+*   npm install -g generator-vue-stack
 *   cd /path/of/your/project  //切到你的项目目录
-*   yo @gfe/vue-stack  //在你的项目目录下执行
+*   yo vue-stack  //在你的项目目录下执行
 
-* <font color=#0f0>友情提醒：新建项目前，请使用npm install -g @gfe/generator-vue-stack安装最新版本的脚手架，在最新版本的脚手架中会新增功能并修复已知bug。</font>
+* <font color=#0f0>友情提醒：新建项目前，请使用npm install -g generator-vue-stack安装最新版本的脚手架，在最新版本的脚手架中会新增功能并修复已知bug。</font>
 
 ## vue2 项目目录结构
 ```
@@ -27,7 +27,7 @@
 │   ├── static          -- webpack打包生成的静态文件，包括js/css等
 │   └── index.html
 ├── devserver.js
-├── f2eci.json
+├── ciconfig.json
 ├── html
 │   └── index.html      -- 入口html
 ├── package.json
@@ -48,7 +48,7 @@
 │   ├── static                -- webpack打包生成的静态文件，包括js/css等
 │   └── yourpagename.html
 ├── devserver.js
-├── f2eci.json
+├── ciconfig.json
 ├── html
 │   └── yourpagename.html     -- 入口html
 ├── node_modules
@@ -78,7 +78,7 @@
 │   ├── static                -- webpack打包生成的静态文件，包括js/css等
 │   └── yourpagename.html
 ├── devserver.js
-├── f2eci.json
+├── ciconfig.json
 ├── html
 │   └── yourpagename.html     -- 入口html
 ├── node_modules
@@ -110,6 +110,7 @@
 
 ## 构建
 *   执行npm run build命令，会在dist/static目录下，生成webpack打包后的.js和.css文件。
+*   构建配置依据ciconfig.json文件的内容，env字段可设置开发环境(dev)，生产环境(product)
 
 ## 注意事项
 *	暂时不支持windows
