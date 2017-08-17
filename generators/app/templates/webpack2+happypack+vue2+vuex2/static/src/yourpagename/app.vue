@@ -1,0 +1,47 @@
+<template>
+<div class="app">
+    <img src="./assets/logo.png">
+    <hello></hello>
+    <count v-if='data.ajaxData' :data='data.ajaxData'></count>
+</div>
+</template>
+
+<script>
+import Hello from './components/hello.vue'
+import Count from './components/count.vue'
+export default {
+    name: 'app',
+    components: {
+        Hello,
+        Count
+    },
+    data() {
+        return {
+
+        }
+    },
+    props: {
+        data: {}
+    },
+    mounted() {
+        this.$store.dispatch('fetchData');
+    },
+    methods: {
+
+    },
+    computed: {
+
+    }
+}
+</script>
+
+<style scoped lang="less" rel="stylesheet/less">
+.app {
+    font-family: 'Avenir', Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: #2c3e50;
+    margin-top: 60px;
+}
+</style>
